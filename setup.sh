@@ -17,6 +17,27 @@ if ! command -v brew &>/dev/null; then
     eval "$(/opt/homebrew/bin/brew shellenv)" || eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+# Install NVM (Node Version Manager)
+if ! command -v nvm &>/dev/null; then
+    echo "Installing NVM..."
+    # Install NVM using the official script
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+    # Load NVM into the shell
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
+
+# Install Node.js version 20 or 22 (example with 20)
+if ! nvm ls | grep -q "v22"; then
+    echo "Installing Node.js v22..."
+    nvm install 22
+fi
+
+# Set Node.js version 22 as the default
+nvm use 22
+nvm alias default 22
+
+
 # Install packages from Brewfile
 brew bundle --file=Brewfile || { echo "Failed to install packages from Brewfile"; exit 1; }
 
