@@ -1,0 +1,26 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "400",
+    "prettier.singleQuote": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "prettier.printWidth": 100,
+    "typescript.preferences.quoteStyle": "single",
+    "prettier.tabWidth": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.colorTheme": "Default Dark+",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "terminal.integrated.env.osx": {},
+    "database-client.autoSync": true,
+    "workbench.editorAssociations": {
+        "*.sqlite": "default"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
+}

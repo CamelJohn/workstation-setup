@@ -1,0 +1,16 @@
+name: Test macOS Setup
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-macos:
+    runs-on: macos-14
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run Setup Script
+        run: bash setup.sh
