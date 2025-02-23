@@ -25,6 +25,9 @@ if ! command -v nvm &>/dev/null; then
     # Load NVM into the shell
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+     # Reload shell profile to ensure `nvm` is available
+    source "$HOME/.bash_profile" || source "$HOME/.zshrc"
 fi
 
 # Install Node.js version 20 or 22 (example with 20)
